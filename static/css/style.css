@@ -526,6 +526,11 @@ html {
     opacity: 0.5;
 }
 
+/* Polish version of the placeholder text */
+html[lang="pl"] .committee-image-frame::before {
+    content: 'Zdjęcie wkrótce';
+}
+
 .committee-name {
     font-family: 'Cinzel', serif;
     font-size: 17px;
