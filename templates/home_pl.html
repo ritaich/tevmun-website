@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}TEVMUN — Strona główna{% endblock %}
+
+{% block menu %}{% include 'menu_pl.html' %}{% endblock %}
+
+{% block content %}
+    <section class="welcome">
+        <h1>Witamy na TEVMUN 2026</h1>
+        <p class="subtitle">Te Vizja Model United Nations</p>
+    </section>
+
+    <section class="organisers-note">
+        <h2>Słowo od organizatorów</h2>
+        <p>Tekst zastępczy — tutaj wpiszesz prawdziwe powitanie. Opowiedz o TEVMUN, co wyróżnia tę edycję, i zaproś delegatów.</p>
+    </section>
+
+    <section class="news">
+        <h2>Aktualności</h2>
+        <div class="news-buttons">
+            <button>Aktualność 1</button>
+            <button>Aktualność 2</button>
+            <button>Aktualność 3</button>
+        </div>
+    </section>
+{% endblock %}
+
+{% block footer_links %}
+    <a href="#">Kontakt</a>
+    <a href="https://www.instagram.com/tevmun/" target="_blank">Instagram</a>
+    <a href="https://mymun.com/conferences/tevmun-2026" target="_blank">MyMUN</a>
+{% endblock %}
