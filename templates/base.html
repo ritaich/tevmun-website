@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{% block lang %}en{% endblock %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}TEVMUN — Te Vizja Model United Nations{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+       <div class="logos">
+        <a href="/" class="logo-link">
+            <img src="{{ url_for('static', filename='images/tevmun-logo.png') }}" alt="TEVMUN" class="logo logo-tevmun">
+        </a>
+        <a href="https://tevizja.pl" target="_blank" class="logo-link logo-circle">
+            <img src="{{ url_for('static', filename='images/tevizja-logo.png') }}" alt="Te Vizja International High School" class="logo logo-school">
+        </a>
+      </div>
+        <button class="menu-button" onclick="toggleMenu()">⋮</button>
+    </header>
+
+    <!-- SIDE MENU (hidden by default) -->
+    <nav class="side-menu" id="sideMenu">
+        <a href="#" class="close-menu" onclick="toggleMenu()">✕</a>
+        {% block menu %}{% endblock %}
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links">
+            {% block footer_links %}{% endblock %}
+        </div>
+        <p class="rights">© 2026 TEVMUN. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('sideMenu').classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
